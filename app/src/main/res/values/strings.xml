@@ -5,4 +5,15 @@
     <!-- 메뉴 -->
     <string name="menu_travel_list">여행 목록</string>
     <string name="menu_settings">앱 정보</string>
+
+    <!-- 입력/수정 화면 -->
+    <string name="place_name">여행지명</string>
+    <string name="et_place">어디로 다녀오셨나요?</string>
+    <string name="visit_date">방문 날짜</string>
+    <string name="et_date">날짜를 선택하세요 (예: 2026-06-01)</string>
+    <string name="memo">여행 메모</string>
+    <string name="et_memo">추억을 기록해 보세요</string>
+    <string name="photo">여행 사진</string>
+    <string name="btn_select_photo">카메라 촬영 또는 갤러리에서 선택</string>
+    <string name="btn_save">기록 저장하기</string>
 </resources>
