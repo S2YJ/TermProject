@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:elevation="2dp">
+
+    <ImageView
+        android:id="@+id/iv_item_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#E0E0E0"
+        android:scaleType="centerCrop"
+        tools:stc="@android:drawable/ic_menu_gallery" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_item_place"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                tools:text="서울 남산타워" />
+
+            <TextView
+                android:id="@+id/tv_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                tools:text="2026-06-01" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_memo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp"
+            android:textColor="#616161"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="날씨가 너무 좋았고 돈까스가 맛있었다. 다음에는 야경 보러 다시 와야지." />
+
+    </LinearLayout>
+
+</LinearLayout>
