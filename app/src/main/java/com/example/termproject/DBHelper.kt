@@ -62,9 +62,12 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         return db.delete(TABLE_NAME, null, null)
     }
 
-    fun getAllTravel(): List<Travel> {
+    fun getAllTravel(isAsc: Boolean = false): List<Travel> {
         val db = readableDatabase
-        val cursor = db.query(TABLE_NAME, null, null, null, null, null, "$COLUMN_NO DESC")
+
+        val sortOrder = if (isAsc) "$COLUMN_VISIT_DATE ASC" else "$COLUMN_VISIT_DATE DESC"
+
+        val cursor = db.query(TABLE_NAME, null, null, null, null, null, sortOrder)
         val travelList = mutableListOf<Travel>()
         with(cursor) {
             while (moveToNext()) {
@@ -73,6 +76,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
                 val visit_date = getString(getColumnIndexOrThrow(COLUMN_VISIT_DATE))
                 val memo = getString(getColumnIndexOrThrow(COLUMN_MEMO))
                 val photo_uri = getString(getColumnIndexOrThrow(COLUMN_PHOTO_URI))
+
                 travelList.add(Travel(no, place, visit_date, memo, photo_uri))
             }
             close()

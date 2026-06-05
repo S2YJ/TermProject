@@ -6,6 +6,7 @@
     <string name="menu_travel_list">여행 목록</string>
     <string name="menu_settings">앱 정보</string>
     <string name="menu_delete_all">전체 기록 삭제</string>
+    <string name="menu_sort">날짜순 정렬 (최신/과거)</string>
 
     <!-- 앱 정보 -->
     <string name="app_title">여행 기록 어플</string>

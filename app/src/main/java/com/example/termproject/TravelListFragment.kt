@@ -18,6 +18,8 @@ class TravelListFragment : Fragment() {
     private lateinit var dbHelper: DBHelper
     private lateinit var travelAdapter: TravelAdapter
 
+    private var isSortAsc = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -64,12 +66,15 @@ class TravelListFragment : Fragment() {
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
-                    R.id.action_delete_all -> {
-                        showDeleteAllDialog()
+                    R.id.action_sort -> {
+                        isSortAsc = !isSortAsc
+                        refreshList()
+                        val msg = if (isSortAsc) "과거순으로 정렬했습니다." else "최신순으로 정렬했습니다."
+                        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
                         true
                     }
-                    R.id.action_help -> {
-                        Toast.makeText(requireContext(), "하단 + 버튼을 눌러 기록을 추가하세요.", Toast.LENGTH_SHORT).show()
+                    R.id.action_delete_all -> {
+                        showDeleteAllDialog()
                         true
                     }
                     else -> false
@@ -84,7 +89,7 @@ class TravelListFragment : Fragment() {
     }
 
     private fun refreshList() {
-        val latestList = dbHelper.getAllTravel()
+        val latestList = dbHelper.getAllTravel(isSortAsc)
         travelAdapter.updateData(latestList)
     }
 
