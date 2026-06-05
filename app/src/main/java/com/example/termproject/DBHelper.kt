@@ -57,6 +57,11 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         return db.delete(TABLE_NAME, "$COLUMN_NO = ?", arrayOf(no.toString()))
     }
 
+    fun deleteAllTravel(): Int {
+        val db = writableDatabase
+        return db.delete(TABLE_NAME, null, null)
+    }
+
     fun getAllTravel(): List<Travel> {
         val db = readableDatabase
         val cursor = db.query(TABLE_NAME, null, null, null, null, null, "$COLUMN_NO DESC")

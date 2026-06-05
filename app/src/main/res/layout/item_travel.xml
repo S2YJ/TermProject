@@ -2,27 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="12dp"
     android:layout_marginBottom="8dp"
-    android:background="?android:attr/selectableItemBackground"
-    android:elevation="2dp">
-
+    android:background="?android:attr/selectableItemBackground">
     <ImageView
         android:id="@+id/iv_item_photo"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="#E0E0E0"
         android:scaleType="centerCrop"
-        tools:stc="@android:drawable/ic_menu_gallery" />
+        android:layout_gravity="top"
+        tools:src="@android:drawable/ic_menu_gallery" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginStart="16dp"
-        android:layout_gravity="center_vertical">
+        android:layout_gravity="top">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +36,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#212121"
-                tools:text="서울 남산타워" />
+                tools:text="여행지명" />
 
             <TextView
                 android:id="@+id/tv_item_date"
@@ -57,8 +56,6 @@
             android:textColor="#616161"
             android:maxLines="2"
             android:ellipsize="end"
-            tools:text="날씨가 너무 좋았고 돈까스가 맛있었다. 다음에는 야경 보러 다시 와야지." />
-
+            tools:text="여행 메모 내용이 여기에 나옵니다." />
     </LinearLayout>
-
 </LinearLayout>

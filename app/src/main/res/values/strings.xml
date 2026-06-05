@@ -5,6 +5,13 @@
     <!-- 메뉴 -->
     <string name="menu_travel_list">여행 목록</string>
     <string name="menu_settings">앱 정보</string>
+    <string name="menu_delete_all">전체 기록 삭제</string>
+
+    <!-- 앱 정보 -->
+    <string name="app_title">여행 기록 어플</string>
+    <string name="app_info">모바일 프로그래밍 기말 프로젝트</string>
+    <string name="app_developer">20223525 안유정</string>
+    <string name="app_version">Version 1.0.0</string>
 
     <!-- 입력/수정 화면 -->
     <string name="place_name">여행지명</string>
@@ -14,6 +21,9 @@
     <string name="memo">여행 메모</string>
     <string name="et_memo">추억을 기록해 보세요</string>
     <string name="photo">여행 사진</string>
-    <string name="btn_select_photo">카메라 촬영 또는 갤러리에서 선택</string>
+    <string name="btn_select_photo">갤러리에서 선택</string>
     <string name="btn_save">기록 저장하기</string>
+
+    <!-- 상세 화면 -->
+    <string name="detail_edit">기록 수정</string>
 </resources>

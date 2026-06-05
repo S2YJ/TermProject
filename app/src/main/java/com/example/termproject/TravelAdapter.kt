@@ -8,7 +8,8 @@ import com.example.termproject.databinding.ItemTravelBinding
 
 class TravelAdapter (
     private var travelList: List<Travel>,
-    private val onItemLongClick: (Travel) -> Unit
+    private val onItemClick: (Travel) -> Unit,
+    private  val onItemLongClick: (Travel) -> Unit
 ) : RecyclerView.Adapter<TravelAdapter.TravelViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TravelViewHolder {
@@ -40,6 +41,10 @@ class TravelAdapter (
             }
 
             binding.root.setOnClickListener {
+                onItemClick(travel)
+            }
+
+            binding.root.setOnLongClickListener {
                 onItemLongClick(travel)
                 true
             }
