@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="24dp"
-        android:backgroundTint="@android:color/holo_green_dark"
-        app:tint="@android:color/white"
+        android:backgroundTint="#8D6E63"
+        app:tint="#FFFFFF"
         app:srcCompat="@android:drawable/ic_input_add"
         android:contentDescription="기록 추가" />
 

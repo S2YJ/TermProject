@@ -3,59 +3,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="12dp"
-    android:layout_marginBottom="8dp"
-    android:background="?android:attr/selectableItemBackground">
-    <ImageView
-        android:id="@+id/iv_item_photo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="#E0E0E0"
-        android:scaleType="centerCrop"
-        android:layout_gravity="top"
-        tools:src="@android:drawable/ic_menu_gallery" />
+    android:background="#00000000">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="16dp"
-        android:layout_gravity="top">
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="3dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iv_item_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/radius"
+            android:backgroundTint="#EFEBE9"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_image"
+            android:scaleType="centerCrop"
+            tools:scaleType="center" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_place"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gamja_flower"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    tools:text="여행지명" />
+
+                <TextView
+                    android:id="@+id/tv_item_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gamja_flower"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#8D6E63"
+                    tools:text="2026-06-01" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_item_place"
-                android:layout_width="0dp"
+                android:id="@+id/tv_item_memo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#212121"
-                tools:text="여행지명" />
-
-            <TextView
-                android:id="@+id/tv_item_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/gamja_flower"
+                android:textSize="16sp"
                 android:textColor="#757575"
-                tools:text="2026-06-01" />
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="여행 메모 내용이 여기에 나옵니다." />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_item_memo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:textSize="14sp"
-            android:textColor="#616161"
-            android:maxLines="2"
-            android:ellipsize="end"
-            tools:text="여행 메모 내용이 여기에 나옵니다." />
     </LinearLayout>
 </LinearLayout>

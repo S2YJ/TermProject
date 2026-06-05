@@ -3,12 +3,12 @@
 
     <item
         android:id="@+id/menu_travel_list"
-        android:icon="@android:drawable/ic_menu_agenda"
+        android:icon="@drawable/ic_travel"
         android:title="@string/menu_travel_list" />
 
     <item
         android:id="@+id/menu_settings"
-        android:icon="@android:drawable/ic_menu_info_details"
+        android:icon="@drawable/ic_info"
         android:title="@string/menu_settings" />
 
 </menu>

@@ -24,6 +24,8 @@ class AddEditActivity : AppCompatActivity() {
             contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
             selectedPhotoUri = uri.toString()
             binding.ivPhotoPreview.setImageURI(uri)
+
+            binding.ivPhotoPreview.scaleType = android.widget.ImageView.ScaleType.CENTER_CROP
         }
     }
 
@@ -47,6 +49,8 @@ class AddEditActivity : AppCompatActivity() {
             selectedPhotoUri = intent.getStringExtra("TRAVEL_PHOTO") ?: ""
             if (selectedPhotoUri.isNotEmpty()) {
                 binding.ivPhotoPreview.setImageURI(Uri.parse(selectedPhotoUri))
+
+                binding.ivPhotoPreview.scaleType = android.widget.ImageView.ScaleType.CENTER_CROP
             }
         }
 

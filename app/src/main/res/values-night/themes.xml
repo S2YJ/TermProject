@@ -4,4 +4,9 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="BottomNavFont" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/gamja_flower</item>
+        <item name="fontFamily">@font/gamja_flower</item>
+        <item name="android:textSize">12sp</item> </style>
 </resources>

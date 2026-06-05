@@ -2,7 +2,9 @@ package com.example.termproject
 
 import android.net.Uri
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.termproject.databinding.ItemTravelBinding
 
@@ -36,17 +38,23 @@ class TravelAdapter (
 
             if (travel.photoUri.isNotEmpty()) {
                 binding.ivItemPhoto.setImageURI(Uri.parse(travel.photoUri))
+                binding.ivItemPhoto.scaleType = ImageView.ScaleType.CENTER_CROP
             } else {
-                binding.ivItemPhoto.setImageResource(android.R.drawable.ic_menu_gallery)
+                binding.ivItemPhoto.setImageResource(R.drawable.ic_image)
+                binding.ivItemPhoto.scaleType = ImageView.ScaleType.CENTER
             }
 
             binding.root.setOnClickListener {
                 onItemClick(travel)
             }
 
-            binding.root.setOnLongClickListener {
-                onItemLongClick(travel)
-                true
+            binding.root.setOnCreateContextMenuListener { menu, _, _ ->
+                val deleteMenu = menu.add(Menu.NONE, 1001, 1, "이 기록 삭제하기")
+
+                deleteMenu.setOnMenuItemClickListener {
+                    onItemLongClick(travel)
+                    true
+                }
             }
         }
     }

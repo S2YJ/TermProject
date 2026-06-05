@@ -28,8 +28,10 @@ class DetailActivity : AppCompatActivity() {
 
         if (photoUri.isNotEmpty()) {
             binding.ivDetailPhoto.setImageURI(Uri.parse(photoUri))
+            binding.ivDetailPhoto.scaleType = android.widget.ImageView.ScaleType.CENTER_CROP
         } else {
-            binding.ivDetailPhoto.setImageResource(android.R.drawable.ic_menu_gallery)
+            binding.ivDetailPhoto.setImageResource(R.drawable.ic_image)
+            binding.ivDetailPhoto.scaleType = android.widget.ImageView.ScaleType.CENTER
         }
 
         binding.btnGoEdit.setOnClickListener {

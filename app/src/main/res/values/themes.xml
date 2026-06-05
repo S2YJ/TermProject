@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.TermProject" parent="Base.Theme.TermProject" />
+
+    <style name="BottomNavFont" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/gamja_flower</item>
+        <item name="fontFamily">@font/gamja_flower</item>
+        <item name="android:textSize">12sp</item> </style>
 </resources>

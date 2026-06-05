@@ -1,56 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="16dp"
-    android:paddingTop="50dp">
+    android:background="#F9F8F6"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/radius"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="20dp"
+        android:layout_margin="30dp">
 
         <ImageView
             android:id="@+id/iv_detail_photo"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:scaleType="centerCrop"
-            android:background="#EEEEEE" />
+            android:scaleType="center"
+            android:background="@drawable/radius"
+            android:backgroundTint="#EFEBE9"
+            android:src="@drawable/ic_image" />
 
         <TextView
             android:id="@+id/tv_detail_place"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:fontFamily="@font/gamja_flower"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#212121"
-            android:layout_marginTop="16dp"/>
+            android:textColor="#8D6E63"
+            android:layout_marginTop="20dp"
+            tools:text="제주도 애월 바다" />
 
         <TextView
             android:id="@+id/tv_detail_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:fontFamily="@font/gamja_flower"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:textColor="#757575"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="4dp"
+            tools:text="2026-06-05" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EFEBE9" />
 
         <TextView
             android:id="@+id/tv_detail_memo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#424242"
-            android:layout_marginTop="16dp"/>
+            android:fontFamily="@font/gamja_flower"
+            android:textSize="20sp"
+            android:textColor="#212121"
+            android:lineSpacingExtra="6dp"
+            tools:text="여행 메모 내용이 여기에 나옵니다. 바다가 너무 예뻤다." />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/btn_go_edit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@android:color/holo_green_dark"
-            android:text="@string/detail_edit" />
+            android:layout_height="56dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#8D6E63"
+            android:fontFamily="@font/gamja_flower"
+            android:text="@string/detail_edit"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>

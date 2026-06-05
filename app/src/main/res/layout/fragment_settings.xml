@@ -1,44 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp">
+    android:padding="15dp"
+    android:background="#F9F8F6">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_dark"
-        android:text="@string/app_title"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:background="@drawable/radius"
+        android:backgroundTint="#FFFFFF"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:elevation="5dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_info"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_developer"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#8D6E63"
+                android:background="@drawable/radius"
+                android:textColor="#FFFFFF"
+                android:paddingVertical="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/gamja_flower"
+                android:text="TITLE"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_version"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/app_title"
+                android:fontFamily="@font/gamja_flower"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#8D6E63"
+                android:background="@drawable/radius"
+                android:textColor="#FFFFFF"
+                android:paddingVertical="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/gamja_flower"
+                android:text="DESCRIPTION"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/app_info"
+                android:fontFamily="@font/gamja_flower"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#8D6E63"
+                android:background="@drawable/radius"
+                android:textColor="#FFFFFF"
+                android:paddingVertical="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/gamja_flower"
+                android:text="DEVELOPER"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/app_developer"
+                android:fontFamily="@font/gamja_flower"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#8D6E63"
+                android:background="@drawable/radius"
+                android:textColor="#FFFFFF"
+                android:paddingVertical="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/gamja_flower"
+                android:text="VERSION"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/app_version"
+                android:fontFamily="@font/gamja_flower"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </LinearLayout>

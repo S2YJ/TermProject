@@ -18,7 +18,7 @@
     <string name="place_name">여행지명</string>
     <string name="et_place">어디로 다녀오셨나요?</string>
     <string name="visit_date">방문 날짜</string>
-    <string name="et_date">날짜를 선택하세요 (예: 2026-06-01)</string>
+    <string name="et_date">날짜를 선택하세요</string>
     <string name="memo">여행 메모</string>
     <string name="et_memo">추억을 기록해 보세요</string>
     <string name="photo">여행 사진</string>
